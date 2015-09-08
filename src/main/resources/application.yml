@@ -1,0 +1,28 @@
+spring.data.elasticsearch.cluster-nodes: 10.1.99.175:9300
+spring.data.elasticsearch.repositories.enabled: true
+
+taskthread.pool.corePoolSize: 10
+taskthread.pool.maxPoolSize: 50
+taskthread.pool.queueCapacity: 50
+taskthread.pool.keepAliveSeconds: 60
+taskthread.poolmonitor.keepMonitoringSeconds: 10
+
+CrawlerClassArray:
+  - CrawlerApple
+  - CrawlerYahoo
+  - CrawlerEttoday
+  - CrawlerChinatimes
+
+crawler:
+  targets:
+    -
+      name: CrawlerApple
+    -
+      name: CrawlerYahoo
+    -
+      name: CrawlerEttoday
+    -
+      name: CrawlerChinatimes
+    -
+      name: CrawlerGoogleAlert
+      source: D:/stockalert.txt
